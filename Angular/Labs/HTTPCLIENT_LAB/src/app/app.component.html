@@ -1,0 +1,14 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    {{ title }}!
+   </h1>
+  <h3 style="color:red" >{{currentOperation}}</h3>
+   <h2>Acct No. {{account}}</h2>
+   <p>Current Balance {{balance | currency }}</p>
+ 
+   <ul>
+    <li *ngFor="let item of lastTransactions">
+      <p> {{item.dateOfTransaction | date}}  -  {{item.transactionType}} - {{item.amount | currency}} </p>
+    </li>
+  </ul>
