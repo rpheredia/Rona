@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Transactions List
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <button ion-item *ngFor="let item of transactions" (click)="gotoDetails(item)"> 
+       {{item.transactionType}} -- {{item.amount | currency }} </button>
+  </ion-list>
+  
+  <button color="primary" (click)="dismissThis()" ion-button block> Close </button>
+</ion-content>

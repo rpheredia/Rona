@@ -1,0 +1,27 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Withdraw</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <form [formGroup]="myForm" (ngSubmit)="submitTheValue()">
+        <ion-item>
+    <ion-label>Enter Withdrawal Amount</ion-label>
+
+         <ion-input type="number" placeHolder="amount" 
+                    formControlName="amount">
+          </ion-input>
+   </ion-item>
+   
+      <button ion-button block color="secondary"  type="submit" [disabled]="!myForm.valid">
+        Make the Withdrawal</button>
+
+  </form>
+</ion-list>
+</ion-content>

@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>ATM Project</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h2>Hello, {{getAccountName()}}</h2>
+  <p>
+   Your Current Balance is {{currentBalance | currency}}
+  </p>
+  <ion-list>
+    <button color="primary" (click)="gotoDeposit()" ion-item >Deposit</button>
+    <button color="danger"  (click)="gotoWithdraw()" ion-item >Withdraw</button>
+
+  </ion-list>    
+ 
+</ion-content>
